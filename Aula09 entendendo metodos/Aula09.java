@@ -1,6 +1,3 @@
-package Aula09;
-
-
 public class Aula09 {
     /*
     sempre quando se cria um novo método, deve-se chama-lo
