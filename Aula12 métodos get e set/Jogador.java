@@ -7,13 +7,13 @@ public class Jogador {
         //this.vidas = 20;
         System.out.printf("Jogador %d criado \n", num);
     }
-    //método get tem a função de obter valores de uma variável em uma classe
+    //método get tem a função de obter valores de uma variável em uma classe ou outra classe
     public int getVidas(){
         //return this variable(vidas)
         return this.vidas;
     }
     private final int maxVidas = 10;
-    public void setVidas(int vidas){ //this utiliza a variável deste método
+    public void setVidas(int vidas){ //this utiliza a variável desta classe
         if(vidas > maxVidas) {
             this.vidas = maxVidas;
             System.out.println("vidas do jogador > 10, atribuindo 10");
