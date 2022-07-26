@@ -32,8 +32,5 @@ public class Aula07 {
             System.out.printf("elementos do array: %d\n", n);
         }
         System.out.println("");
-
-
-
     }
 }
