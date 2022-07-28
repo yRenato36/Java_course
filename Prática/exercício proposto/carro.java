@@ -1,0 +1,42 @@
+public class carro {
+    
+    //atributos
+    String nome, marca;
+    int ano;
+    float vel;
+    boolean farolOnOff;
+
+    void statusCarro() {
+        System.out.printf("Nome: %s\nMarca: %s\nAno: %d", this.nome, this.marca, this.ano);
+    }
+    //métodos
+    void acelerar(int aceleracao){
+        System.out.println("acelerando....");
+        while(aceleracao < this.vel){
+            aceleracao++;
+            System.out.printf(" -> %d", aceleracao); 
+        }
+        
+    }
+
+    void freiar(int reduzir) {
+        vel -= reduzir;
+    }
+
+    void buzinar(){
+        System.out.println("bibibi.....");
+    }
+    boolean farol() {
+        boolean oFarol;
+        oFarol = this.farolOnOff; //recebe o valor que foi dado ao método e transfere para uma variável nesta class, então faz todo o processo
+        if(oFarol == true){
+            System.out.println("Farol aceso");
+             oFarol = true;
+        }
+        else{
+            System.out.println("Farol apagado");
+            oFarol = false;
+        }
+        return oFarol;
+    }
+}
