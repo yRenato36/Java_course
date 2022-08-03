@@ -20,13 +20,10 @@ public class carro {
             aceleracao++;
             System.out.printf(" -> %d", aceleracao); 
         }
-        
     }
-
     void freiar(int reduzir) {
         vel -= reduzir;
     }
-
     void buzinar(){
         System.out.println("Digite BIBI para buzinar");
         Scanner ler = new Scanner(System.in);
