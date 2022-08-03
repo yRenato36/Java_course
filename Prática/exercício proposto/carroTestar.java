@@ -7,11 +7,14 @@ public class carroTestar {
         carro carro1 = new carro();
 
         //dando valores aos atributos
-        /* carro1.nome = "Celta";
+        carro1.nome = "Celta";
         carro1.marca = "Chevrolet";
         carro1.ano = 2009;
-        carro1.vel = 30; */
-        System.out.println("Vamos acelerar? + acelera, - desacelera");
+        carro1.vel = 30;
+        
+        carro1.statusCarro();
+
+        System.out.println("\nVamos acelerar? + acelera, - desacelera");
         String acel;
         acel = ler.nextLine();
         if(acel.equals("+")){
@@ -22,7 +25,7 @@ public class carroTestar {
             carro1.acelerar(0);
         }
         else if(acel.equals("-")) {
-
+            //pensar em algo para fazer nesta condição.
         }
         Scanner lerFarol = new Scanner(System.in);
         
@@ -36,11 +39,12 @@ public class carroTestar {
         else {
             carro1.farolOnOff = false; //envia o valor para um método em outra class
         }
-
+        carro1.farol(); 
+        
+        carro1.buzinar(); //quando chamo um método, ele traz todos os valores e comandos que estão não outra classe
+        
         //chamando os métodos
         //carro1.statusCarro();
-        
-        carro1.farol();        
-        //System.out.println("\n" + carro1.vel);
+                       
     }
 }

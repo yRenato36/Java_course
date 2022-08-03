@@ -1,3 +1,7 @@
+import java.util.Scanner;
+
+import javax.swing.plaf.TextUI;
+
 public class carro {
     
     //atributos
@@ -16,15 +20,20 @@ public class carro {
             aceleracao++;
             System.out.printf(" -> %d", aceleracao); 
         }
-        
     }
-
     void freiar(int reduzir) {
         vel -= reduzir;
     }
-
     void buzinar(){
-        System.out.println("bibibi.....");
+        System.out.println("Digite BIBI para buzinar");
+        Scanner ler = new Scanner(System.in);
+        String bi = ler.nextLine();
+        if(bi.toLowerCase().equals("bibi") == true) {
+            System.out.println("Buzinando.... bibibi.....");  
+        }
+        else{
+            System.out.println("digite um valor válido para buzinar");
+        }              
     }
     boolean farol() {
         boolean oFarol;
