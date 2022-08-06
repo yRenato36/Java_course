@@ -1,5 +1,4 @@
 //Caminho das classes: Escola > Pessoa > Dados
-
 import java.util.Date;
 
 public class Escola {
