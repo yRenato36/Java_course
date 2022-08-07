@@ -1,11 +1,30 @@
-import javax.crypto.spec.DESKeySpec;
-import javax.swing.text.AbstractDocument.BranchElement;
-
+import java.util.Scanner;
 public class Empresa {
     public static void main(String[] args) {
-        Colaborador c1 = new Colaborador("Jeferson", "Rua 11", 2131, 231);
+        String eNome, eRua, eTipCargo;
+        int eCep, eTel;
         
-        for(int i = 1; i <= 4; i++){
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Bem-vindo a empresa X\n");
+        System.out.println("Digite seu nome completo");
+        eNome = ler.nextLine();
+
+        System.out.println("Digite sua rua");
+        eRua = ler.nextLine();
+
+        System.out.println("Digite seu CEP");
+        eCep = ler.nextInt();
+
+        System.out.println("Digite seu telefone");
+        eTel = ler.nextInt();
+        
+        System.out.println("Digite seu cargo:\ng - Gerente, e - Equipe, r - Recursos Humanos");
+        Scanner lerCargo = new Scanner(System.in);
+        eTipCargo = lerCargo.nextLine();
+
+        Colaborador c1 = new Colaborador(eNome, eRua, eCep, eTel, eTipCargo);
+        
+        for(int i = 1; i <= 5; i++){
             switch(i) {
                 case 1:
                     System.out.println("Nome colaborador: " + c1.iNome);
@@ -20,7 +39,8 @@ public class Empresa {
                     System.out.println("Telefone colaborador: " + c1.iTel);
                 break;
                 default:
-                System.out.println(" [ERROR] ");
+                    System.out.println("Cargo colaborador: " + c1.iTipCargo);
+                break;
             }
         }
     }
