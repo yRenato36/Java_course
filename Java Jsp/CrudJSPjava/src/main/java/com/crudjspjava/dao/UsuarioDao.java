@@ -16,7 +16,7 @@ public class UsuarioDao {
 		
 		try { //tenta criar uma conexão com o banco de dados
 			Class.forName("com.mysql.jdbx.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/crudjspjava", "root", "");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/crudjspjava", "root", "123456");
 		}catch (Exception e) { //caso não consiga, ele apresenta o erro
 			// TODO: handle exception
 			System.out.println(e);
